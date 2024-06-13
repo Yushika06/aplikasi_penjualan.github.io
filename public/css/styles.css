@@ -1,0 +1,187 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+    flex: 1;
+}
+
+#payment, #chat {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+}
+
+input[type="text"], input[type="password"], textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.chat-box {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    height: 300px;
+    overflow-y: scroll;
+    margin-bottom: 1rem;
+}
+
+.message {
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.message.seller {
+    background-color: #f1f1f1;
+    text-align: left;
+}
+
+.message.buyer {
+    background-color: #ddd;
+    text-align: right;
+}
+
+#profile {
+    text-align: center;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-info img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.profile-details {
+    margin-top: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+#edit-profile-form {
+    margin-top: 2rem;
+    text-align: left;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#edit-profile-form label {
+    display: block;
+    margin-top: 1rem;
+}
+
+#edit-profile-form input, #edit-profile-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+#products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+    flex: 1 1 calc(33.333% - 2rem); /* Basis ukuran box produk */
+    max-width: 300px; /* Ukuran maksimum box produk */
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn {
+    background-color: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+#product-detail {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+#product-detail img {
+    max-width: 300px;
+    height: auto;
+}
+
+.product-info {
+    max-width: 600px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+@media (max-width: 768px) {
+    .product {
+        flex: 1 1 calc(50% - 2rem); /* Basis ukuran box produk pada layar sedang */
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        flex: 1 1 calc(100% - 2rem); /* Basis ukuran box produk pada layar kecil */
+    }
+}
